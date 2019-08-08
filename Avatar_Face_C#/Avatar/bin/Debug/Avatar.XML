@@ -1,0 +1,274 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Avatar</name>
+    </assembly>
+    <members>
+        <member name="T:Avatar.FaceBlend">
+            <summary>
+            表情对象，待完成
+            </summary>
+        </member>
+        <member name="T:Avatar.CameraTexture">
+            <summary>
+            摄像机控制类
+            </summary>
+        </member>
+        <member name="M:Avatar.CameraTexture.Open(System.Int32)">
+            <summary>
+            打开摄像机拍摄功能
+            </summary>
+            <param name="id">设备ID</param>
+        </member>
+        <member name="M:Avatar.CameraTexture.OnGUI">
+            <summary>
+            将摄像机图像渲染到屏幕，请在OnGUI函数中调用
+            </summary>
+        </member>
+        <member name="M:Avatar.CameraTexture.Close">
+            <summary>
+            关闭摄像机拍摄
+            </summary>
+        </member>
+        <member name="M:Avatar.CameraTexture.GetTexture(System.Single)">
+            <summary>
+            截取当前摄像机在屏幕中的信息
+            </summary>
+            <param name="scale">比例值</param>
+            <returns>摄像机图片</returns>
+        </member>
+        <member name="T:Avatar.AvatarTools">
+            <summary>
+            工具类
+            </summary>
+        </member>
+        <member name="P:Avatar.AvatarTools.AvatarDataFolderPath">
+            <summary>
+            AvatarData 文件路径
+            </summary>
+        </member>
+        <member name="F:Avatar.AvatarTools.AvatarDataExtension">
+            <summary>
+            AvatarData 文件扩展名
+            </summary>
+        </member>
+        <member name="F:Avatar.AvatarTools.FaceURL">
+            <summary>
+            Face++ URL
+            </summary>
+        </member>
+        <member name="F:Avatar.AvatarTools.API_Key">
+            <summary>
+            Face++ API_Key
+            </summary>
+        </member>
+        <member name="F:Avatar.AvatarTools.API_Secret">
+            <summary>
+            Face++ API_Secret
+            </summary>
+        </member>
+        <member name="M:Avatar.AvatarTools.ReadAvtarDatas">
+            <summary>
+            读取本地的Avatar数据列表
+            </summary>
+        </member>
+        <member name="M:Avatar.AvatarTools.SaveAvatarData(Avatar.AvatarData)">
+            <summary>
+            保存Avatar数据到本地
+            </summary>
+        </member>
+        <member name="M:Avatar.AvatarTools.DeleteAvatarDatas(Avatar.AvatarData)">
+            <summary>
+            删除本地的Avatar数据
+            </summary>
+        </member>
+        <member name="T:Avatar.AvatarObject">
+            <summary>
+            为模型添加Avatar功能,模型必须严格符合Avatar规范
+            </summary>
+        </member>
+        <member name="P:Avatar.AvatarObject.Face">
+            <summary>
+            角色脸部模型
+            </summary>
+        </member>
+        <member name="P:Avatar.AvatarObject.Hair">
+            <summary>
+            角色头发模型
+            </summary>
+        </member>
+        <member name="P:Avatar.AvatarObject.UpperBody">
+            <summary>
+            角色上身身体模型
+            </summary>
+        </member>
+        <member name="P:Avatar.AvatarObject.UpperCloth">
+            <summary>
+            角色上身布料模型
+            </summary>
+        </member>
+        <member name="P:Avatar.AvatarObject.LowerBody">
+            <summary>
+            角色下身身体模型
+            </summary>
+        </member>
+        <member name="P:Avatar.AvatarObject.LowerCloth">
+            <summary>
+            角色下身布料模型
+            </summary>
+        </member>
+        <member name="P:Avatar.AvatarObject.Shoes">
+            <summary>
+            角色鞋子模型
+            </summary>
+        </member>
+        <member name="P:Avatar.AvatarObject.Bones">
+            <summary>
+            角色骨骼信息
+            </summary>
+        </member>
+        <member name="P:Avatar.AvatarObject.Gender">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:Avatar.AvatarObject.Age">
+            <summary>
+            年龄
+            </summary>
+        </member>
+        <member name="P:Avatar.AvatarObject.ChangeTime">
+            <summary>
+            角色的变化时间区间
+            </summary>
+        </member>
+        <member name="T:Avatar.AvatarObject.ResultCallBack">
+            <summary>
+            获取结果回调委托
+            </summary>
+        </member>
+        <member name="E:Avatar.AvatarObject.LoadResultEvent">
+            <summary>
+            获取结果回调事件
+            </summary>
+        </member>
+        <member name="M:Avatar.AvatarObject.LoadFaceTex(UnityEngine.Texture2D)">
+            <summary>
+            读取贴图到Face++，然后根据数据变化
+            </summary>
+            <param name="tex"></param>
+        </member>
+        <member name="M:Avatar.AvatarObject.SetAvatarData(Avatar.AvatarData)">
+            <summary>
+            读取一个Avatar数据
+            </summary>
+            <param name="data">Avatar数据</param>
+        </member>
+        <member name="M:Avatar.AvatarObject.GetAvatarData">
+            <summary>
+            获取该Object的AvatarData，每次调用都会new一个对象
+            </summary>
+            <returns>返回一个新的AvatarData</returns>
+        </member>
+        <member name="M:Avatar.AvatarObject.LoadSkinnedMesh(UnityEngine.SkinnedMeshRenderer,UnityEngine.SkinnedMeshRenderer)">
+            <summary>
+            更换skinnedMesh
+            </summary>
+            <param name="origin">被更换的目标</param>
+            <param name="target">更换目标</param>
+        </member>
+        <member name="T:Avatar.AvatarDebug">
+            <summary>
+            AvatarLog类
+            </summary>
+        </member>
+        <member name="T:Avatar.AvatarDebug.LogCallBack">
+            <summary>
+            AvtarLog回调委托
+            </summary>
+            <param name="log">日志内容</param>
+            <param name="stack">栈跟踪</param>
+            <param name="type">日志类型</param>
+        </member>
+        <member name="E:Avatar.AvatarDebug.LogEvent">
+            <summary>
+            AvatarLog的回调事件
+            </summary>
+        </member>
+        <member name="P:Avatar.AvatarDebug.Enable">
+            <summary>
+            AvtarLog开关
+            </summary>
+        </member>
+        <member name="P:Avatar.AvatarDebug.FolderPath">
+            <summary>
+            AvtarLog文件目录
+            </summary>
+        </member>
+        <member name="P:Avatar.AvatarDebug.FileName">
+            <summary>
+            AvtarLog文件名
+            </summary>
+        </member>
+        <member name="M:Avatar.AvatarDebug.Delete">
+            <summary>
+            删除Log文件
+            </summary>
+        </member>
+        <member name="T:Avatar.AvatarData">
+            <summary>
+            AvatarData 数据信息类
+            </summary>
+        </member>
+        <member name="P:Avatar.AvatarData.GUID">
+            <summary>
+            识别ID
+            </summary>
+        </member>
+        <member name="P:Avatar.AvatarData.AvatarName">
+            <summary>
+            角色姓名
+            </summary>
+        </member>
+        <member name="P:Avatar.AvatarData.Gender">
+            <summary>
+            角色性别
+            </summary>
+        </member>
+        <member name="P:Avatar.AvatarData.Age">
+            <summary>
+            角色的年龄
+            </summary>
+        </member>
+        <member name="T:Avatar.GenderType">
+            <summary>
+            性别信息
+            </summary>
+        </member>
+        <member name="F:Avatar.GenderType.Null">
+            <summary>
+            未知
+            </summary>
+        </member>
+        <member name="F:Avatar.GenderType.Male">
+            <summary>
+            男性
+            </summary>
+        </member>
+        <member name="F:Avatar.GenderType.Female">
+            <summary>
+            女性
+            </summary>
+        </member>
+        <member name="T:Avatar.BoneInfo">
+            <summary>
+            骨骼信息
+            </summary>
+        </member>
+        <member name="T:Avatar.SkinnedInfo">
+            <summary>
+            蒙皮信息
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,11 @@
+E:\VS Project\C#\Avatar\Avatar\bin\Debug\Avatar.dll
+E:\VS Project\C#\Avatar\Avatar\bin\Debug\Avatar.pdb
+E:\VS Project\C#\Avatar\Avatar\bin\Debug\UnityEngine.dll
+E:\VS Project\C#\Avatar\Avatar\bin\Debug\UnityEngine.xml
+E:\VS Project\C#\Avatar\Avatar\obj\Debug\Avatar.dll
+E:\VS Project\C#\Avatar\Avatar\obj\Debug\Avatar.pdb
+E:\VS Project\C#\Avatar\Avatar\bin\Debug\Mono.CSharp.dll
+E:\VS Project\C#\Avatar\Avatar\bin\Debug\System.Core.dll
+E:\VS Project\C#\Avatar\Avatar\bin\Debug\Mono.Posix.dll
+E:\VS Project\C#\Avatar\Avatar\bin\Debug\Avatar.XML
+E:\VS Project\C#\Avatar\Avatar\obj\Debug\Avatar.csprojResolveAssemblyReference.cache
